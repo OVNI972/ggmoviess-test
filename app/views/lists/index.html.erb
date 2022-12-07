@@ -1,0 +1,24 @@
+<div class="cover mb-4 d-flex align-items-center justify-content-center">
+  <div class="text-center text-white">
+    <h1>Enregistrez tout type de films</h1>
+    <h3 class="typed-js" data-controller="typed-js"></h3>
+  </div>
+</div>
+<div class="container">
+  <div class="d-flex align-items-center justify-content-between mb-3">
+    <h3 class="mb-0">Mes Listes</h3>
+    <%= link_to "Créer une liste de films", new_list_path, class: "btn btn-flat" %>
+  </div>
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    <% @lists.each do |list| %>
+      <div class="card" style="width: 18rem;">
+        <img src="https://www.zupimages.net/up/22/49/jvz7.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><%= list.name %></h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <%= link_to "Lire la liste", list_path(list), class:"btn btn-primary" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
