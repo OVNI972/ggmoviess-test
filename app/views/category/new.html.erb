@@ -2,7 +2,11 @@
   <div class="row">
     <div class="col-12 col-md-6 offset-lg-3">
       <div class="bg-white rounded p-3 shadow">
+<<<<<<< HEAD
         <h3>Ajoutez un film à votre <%= @list.name %></h3>
+=======
+        <h3>Ajoutez un film à votre <%= @list.name %> </h3>
+>>>>>>> 10a4ea32659a328f300da5dc09696a189639c815
         <%= simple_form_for [@list, @category] do |f| %>
           <%= f.input :comment, placeholder: "Entrez un commentaire sur le film" %>
           <%= f.association :movie, prompt: "Sélectionner un film", input_html: {data: {controller: "tom-select"}} %>
