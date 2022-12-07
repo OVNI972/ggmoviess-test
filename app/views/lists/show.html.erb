@@ -1,0 +1,10 @@
+<h1><%= @list.name %></h1>
+
+<div class="d-flex justify-content-between my-4">
+    <span class="mb-2 d-block"><small><em class="text-muted"><%= "Vous n'avez pas encore enregistré de films !" if @list.movies.empty? %></em></small></span>
+    <div>
+      <button type="button" class="btn btn-flat" data-bs-toggle="modal" data-bs-target="#new_movie_modal">
+        Ajouter un film
+      </button>
+    </div>
+</div>
